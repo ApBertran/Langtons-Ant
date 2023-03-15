@@ -3,7 +3,6 @@ Board b;
 void setup() {
   size(800,800);
   b = new Board();
-  frameRate(10);
 }
 
 void draw() {
