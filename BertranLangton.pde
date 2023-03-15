@@ -1,7 +1,7 @@
 Board b;
 
 void setup() {
-  size(800,800);
+  size(800, 800);
   b = new Board();
 }
 
