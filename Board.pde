@@ -17,12 +17,20 @@ public class Board {
       for (Tile[] r : tileArray) {
         for (Tile t : r) {
           if (t.getLocation()[0] == ant.getLocation()[0] && t.getLocation()[1] == ant.getLocation()[1]) {
-            if (t.getStatus()) {
+            if (t.getStatus() == 0) {
+              ant.turn(1);
+              t.toggleStatus();
+              ant.move();
+            } else if (t.getStatus() == 1) {
+              ant.turn(1);
+              t.toggleStatus();
+              ant.move();
+            } else if (t.getStatus() == 2) {
               ant.turn(-1);
               t.toggleStatus();
               ant.move();
-            } else {
-              ant.turn(1);
+            } else if (t.getStatus() == 3) {
+              ant.turn(-1);
               t.toggleStatus();
               ant.move();
             }
